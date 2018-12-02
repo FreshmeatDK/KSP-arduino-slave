@@ -20,6 +20,7 @@ void setup()
 void loop() 
 {
 	delay(10);
+	//Serial.println("wait");
 }
 
 void receiveInfo(int numbytes)
@@ -29,6 +30,6 @@ void receiveInfo(int numbytes)
 		ctrlDta = Wire.read();
 
 	}
-
+	//Serial.println("Data");
 	Serial.write((byte*)&ctrlDta, sizeof(ctrlDta));
 }
